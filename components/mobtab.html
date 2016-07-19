@@ -1,0 +1,156 @@
+﻿<div flex layout="row" layout-align="center center" style="position:fixed;bottom:-8px;display:block;text-decoration:none;text-align:center;background-color:rgb(221, 231, 237);opacity:.8;width: 100%;">
+    <md-button class="md-icon-button" aria-label="contact" ng-controller="contactController as ctrl" ng-click="ctrl.openControlPanel()" hide-xs>
+        <md-tooltip md-direction="top" hide-xs>
+            Comments Here
+        </md-tooltip>
+        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+            <path fill="#a64dff" d="M12,3C7.46,3 3.34,4.78 0.29,7.67C0.11,7.85 0,8.1 0,8.38C0,8.66 0.11,8.91 0.29,9.09L2.77,11.57C2.95,11.75 3.2,11.86 3.5,11.86C3.75,11.86 4,11.75 4.18,11.58C4.97,10.84 5.87,10.22 6.84,9.73C7.17,9.57 7.4,9.23 7.4,8.83V5.73C8.85,5.25 10.39,5 12,5C13.59,5 15.14,5.25 16.59,5.72V8.82C16.59,9.21 16.82,9.56 17.15,9.72C18.13,10.21 19,10.84 19.82,11.57C20,11.75 20.25,11.85 20.5,11.85C20.8,11.85 21.05,11.74 21.23,11.56L23.71,9.08C23.89,8.9 24,8.65 24,8.37C24,8.09 23.88,7.85 23.7,7.67C20.65,4.78 16.53,3 12,3M9,7V10C9,10 3,15 3,18V22H21V18C21,15 15,10 15,10V7H13V9H11V7H9M12,12A4,4 0 0,1 16,16A4,4 0 0,1 12,20A4,4 0 0,1 8,16A4,4 0 0,1 12,12M12,13.5A2.5,2.5 0 0,0 9.5,16A2.5,2.5 0 0,0 12,18.5A2.5,2.5 0 0,0 14.5,16A2.5,2.5 0 0,0 12,13.5Z" />
+        </svg>
+    </md-button>
+
+    <md-button class="md-icon-button" aria-label="contact" ng-controller="DialogCtrl" ng-click="showContact($event)" hide-gt-xs>
+        <md-tooltip md-direction="top" hide-xs>
+            Comments Here
+        </md-tooltip>
+        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+            <path fill="#a64dff" d="M12,3C7.46,3 3.34,4.78 0.29,7.67C0.11,7.85 0,8.1 0,8.38C0,8.66 0.11,8.91 0.29,9.09L2.77,11.57C2.95,11.75 3.2,11.86 3.5,11.86C3.75,11.86 4,11.75 4.18,11.58C4.97,10.84 5.87,10.22 6.84,9.73C7.17,9.57 7.4,9.23 7.4,8.83V5.73C8.85,5.25 10.39,5 12,5C13.59,5 15.14,5.25 16.59,5.72V8.82C16.59,9.21 16.82,9.56 17.15,9.72C18.13,10.21 19,10.84 19.82,11.57C20,11.75 20.25,11.85 20.5,11.85C20.8,11.85 21.05,11.74 21.23,11.56L23.71,9.08C23.89,8.9 24,8.65 24,8.37C24,8.09 23.88,7.85 23.7,7.67C20.65,4.78 16.53,3 12,3M9,7V10C9,10 3,15 3,18V22H21V18C21,15 15,10 15,10V7H13V9H11V7H9M12,12A4,4 0 0,1 16,16A4,4 0 0,1 12,20A4,4 0 0,1 8,16A4,4 0 0,1 12,12M12,13.5A2.5,2.5 0 0,0 9.5,16A2.5,2.5 0 0,0 12,18.5A2.5,2.5 0 0,0 14.5,16A2.5,2.5 0 0,0 12,13.5Z" />
+        </svg>
+        <script type="text/ng-template" id="contactmob.html">
+            <form name="register" class="suscribe-popup">
+                <p class="md-title" style="color:#00b2a9;padding-left:10px;">Contact</p>
+                <label style="padding-left:10px;">Comments or questions are welcome.</label>
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block input-box layout-xs" flex-gt-sm="">
+                        <label>Full Name<span style="color:#f00;">*</span></label>
+                        <input type="text" required/>
+                    </md-input-container>
+                    <md-input-container class="md-block input-box layout-xs" flex-gt-sm="">
+                        <label>Subject<span style="color:#f00;">*</span></label>
+                        <input type="text" required/>
+                    </md-input-container>
+                </div>
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block input-box layout-xs" flex-gt-sm="">
+                        <label>Email-Id<span style="color:#f00;">*</span></label>
+                        <input type="email" name="email" ng-model="email" required>
+                        <span style="color:black;" ng-show="register.email.$dirty && register.email.$invalid">
+                            <span ng-show="register.email.$error.required">Email is required.</span>
+                            <span ng-show="register.email.$error.email">Invalid email address.</span>
+                        </span>
+                    </md-input-container>
+                    <md-input-container class="md-block input-box layout-xs" flex-gt-sm="">
+                        <textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;" placeholder="Hey... Say to Something"></textarea>
+                    </md-input-container>
+
+                </div>
+                <br>
+                <md-button class="md-raised" href="" target="_self" style="background-color:#00b2a9;font-family:Franchise;font-size:25px;color:#fff;">
+                    Submit
+                </md-button>
+            </form> 
+        </script>
+    </md-button>
+
+    <md-button class="md-icon-button" aria-label="wishlist" ng-controller="wishController as ctrl" ng-click="ctrl.openControlPanel()">
+        <md-tooltip md-direction="top" hide-xs>
+            Wishlist
+        </md-tooltip>
+        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+            <path fill="#00b300" d="M3,2H6V5H3V2M6,7H9V10H6V7M8,2H11V5H8V2M17,11L12,6H15V2H19V6H22L17,11M7.5,22C6.72,22 6.04,21.55 5.71,20.9V20.9L3.1,13.44L3,13A1,1 0 0,1 4,12H20A1,1 0 0,1 21,13L20.96,13.29L18.29,20.9C17.96,21.55 17.28,22 16.5,22H7.5M7.61,20H16.39L18.57,14H5.42L7.61,20Z" />
+        </svg>
+    </md-button>
+    <md-button class="md-icon-button" aria-label="give" ng-controller="viewerController as ctrl" ng-click="ctrl.openControlPanel()" hide-xs>
+        <md-tooltip md-direction="top" hide-xs>
+            Donate Now
+        </md-tooltip>
+        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+            <path fill="#e60000" d="M22,12V20A2,2 0 0,1 20,22H4A2,2 0 0,1 2,20V12A1,1 0 0,1 1,11V8A2,2 0 0,1 3,6H6.17C6.06,5.69 6,5.35 6,5A3,3 0 0,1 9,2C10,2 10.88,2.5 11.43,3.24V3.23L12,4L12.57,3.23V3.24C13.12,2.5 14,2 15,2A3,3 0 0,1 18,5C18,5.35 17.94,5.69 17.83,6H21A2,2 0 0,1 23,8V11A1,1 0 0,1 22,12M4,20H11V12H4V20M20,20V12H13V20H20M9,4A1,1 0 0,0 8,5A1,1 0 0,0 9,6A1,1 0 0,0 10,5A1,1 0 0,0 9,4M15,4A1,1 0 0,0 14,5A1,1 0 0,0 15,6A1,1 0 0,0 16,5A1,1 0 0,0 15,4M3,8V10H11V8H3M13,8V10H21V8H13Z" />
+        </svg>
+    </md-button>
+
+    <md-button class="md-icon-button" aria-label="give" ng-controller="DialogCtrl" ng-click="showDonate($event)" hide-gt-xs>
+        <md-tooltip md-direction="top" hide-xs>
+            Donate Now
+        </md-tooltip>
+        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+            <path fill="#e60000" d="M22,12V20A2,2 0 0,1 20,22H4A2,2 0 0,1 2,20V12A1,1 0 0,1 1,11V8A2,2 0 0,1 3,6H6.17C6.06,5.69 6,5.35 6,5A3,3 0 0,1 9,2C10,2 10.88,2.5 11.43,3.24V3.23L12,4L12.57,3.23V3.24C13.12,2.5 14,2 15,2A3,3 0 0,1 18,5C18,5.35 17.94,5.69 17.83,6H21A2,2 0 0,1 23,8V11A1,1 0 0,1 22,12M4,20H11V12H4V20M20,20V12H13V20H20M9,4A1,1 0 0,0 8,5A1,1 0 0,0 9,6A1,1 0 0,0 10,5A1,1 0 0,0 9,4M15,4A1,1 0 0,0 14,5A1,1 0 0,0 15,6A1,1 0 0,0 16,5A1,1 0 0,0 15,4M3,8V10H11V8H3M13,8V10H21V8H13Z" />
+        </svg>
+        <script type="text/ng-template" id="donatemob.html">
+
+            <form name="register" class="suscribe-popup">
+                <p class="md-title" style="color:#00b2a9;padding-left:10px;font-size: 29px; margin-top: 15px; margin-bottom: 10px; ">Donate Now</p>
+                <label style="padding-left:10px; color:#000; font-weight:600;">DONER INFORMATION</label>
+                <md-divider></md-divider>
+                <div layout-gt-sm="row" style="margin-top:10px; color:#333">
+                    <md-input-container class="input-box layout-xs" flex-gt-sm="">
+                        <label>First Name<span style="color:#f00;">*</span></label>
+                        <input type="text" />
+                    </md-input-container>
+                    <md-input-container class="input-box layout-xs" flex-gt-sm="">
+                        <label>Middle Name<span style="color:#f00;">*</span></label>
+                        <input type="text" />
+                    </md-input-container>
+                    <md-input-container class="input-box layout-xs" flex-gt-sm="">
+                        <label>Last Name<span style="color:#f00;">*</span></label>
+                        <input type="text" />
+                    </md-input-container>
+                    <md-input-container class="input-box layout-xs" flex-gt-sm="">
+                        <label>Email-Id<span style="color:#f00;">*</span></label>
+                        <input type="email" name="email" ng-model="email" required>
+                        <span style="color:black;" ng-show="register.email.$dirty && register.email.$invalid">
+                            <span ng-show="register.email.$error.required">Email is required.</span>
+                            <span ng-show="register.email.$error.email">Invalid email address.</span>
+                        </span>
+                    </md-input-container>
+                    <md-input-container class="input-box layout-xs" flex-gt-sm="">
+                        <label>Contact No</label>
+                        <input type="number" required />
+                    </md-input-container>
+                </div>
+                <br>
+
+                <label style="padding-left:10px; color:#000; font-weight:600;">CARD INFORMATION</label>
+                <md-divider></md-divider>
+                <div layout-gt-sm="row" style="margin-top:10px;">
+                    <md-input-container class="input-box layout-xs" flex-gt-sm="">
+                        <label>CARD NUMBER<span style="color:#f00;">*</span></label>
+                        <input type="text" />
+                    </md-input-container>
+                    <md-input-container class="input-box layout-xs" flex-gt-sm="">
+                        <label>CVV<span style="color:#f00;">*</span></label>
+                        <input type="text" />
+                    </md-input-container>
+                    <md-input-container class="input-box layout-xs" flex-gt-sm="">
+                        <label>EXPIRY DATE<span style="color:#f00;">*</span></label>
+                        <input type="text" />
+                    </md-input-container>
+                </div>
+                <div layout-gt-sm="row">
+                    <md-input-container class="input-box layout-xs" flex-gt-sm="">
+                        <label>Amount to Donate(in $)</label>
+                        <input type="number" name="number" ng-model="age" required min="25" max="2500">
+                        <span style="color:black;" ng-show="register.number.$dirty && register.number.$invalid">
+                            <span ng-show="register.number.$error.required">Amount is required.</span>
+                        </span>
+                    </md-input-container>
+                </div>
+                <md-button class="md-raised" href="" target="_self" style="background-color:#00b2a9;font-family:Franchise;font-size:25px;color:#fff;">
+                    Donate
+                </md-button>
+            </form>
+        </script>
+    </md-button>
+
+    <md-button class="md-icon-button md-accent" aria-label="volunteer">
+        <md-tooltip md-direction="top">
+            Apply for Volunteer
+        </md-tooltip>
+        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+            <path fill="#ff1aff" d="M1.5,4V5.5C1.5,9.65 3.71,13.28 7,15.3V20H22V18C22,15.34 16.67,14 14,14C14,14 13.83,14 13.75,14C9,14 5,10 5,5.5V4M14,4A4,4 0 0,0 10,8A4,4 0 0,0 14,12A4,4 0 0,0 18,8A4,4 0 0,0 14,4Z" />
+        </svg>
+    </md-button>
+
+
+    <!--<img src="img/top.ico" id="return-to-top" style="position:fixed;bottom:20px;    right: 20px;    background: rgb(0, 0, 0,0.7);        height: 50px;    display: block;    text-decoration: none;    -webkit-border-radius: 35px;    -moz-border-radius: 35px;    border-radius: 35px;    display: none;    -webkit-transition: all 0.3s linear;    -moz-transition: all 0.3s ease;    -ms-transition: all 0.3s ease;    -o-transition: all 0.3s ease;    transition: all 0.3s ease;" />-->
+
+</div>

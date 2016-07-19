@@ -1,0 +1,371 @@
+@font-face {font-family: "Franchise";
+    src: url("http://db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.eot");
+    src: url("http://db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.eot?#iefix") format("embedded-opentype"),
+    url("http://db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.woff2") format("woff2"),
+    url("http://db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.woff") format("woff"),
+    url("http://db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.ttf") format("truetype"),
+    url("http://db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.svg#Franchise") format("svg");
+}
+body, html {
+    height: 100%;
+    color: rgba(0,0,0,.87);
+    background-image: url('../img/bg-01.jpg')!important;
+    position: relative;
+}
+.header.scrolling {
+    background: url(../images/trans.png);
+}
+
+.new-letter{
+   border-left:1px solid ;  
+}
+
+.btn-action {
+    background-color: #00b2a9;
+    color: #fff;
+    padding: 6px 25px;
+    border: 3px solid #00b2a9;
+    font-size: 1em;
+    margin: 0 0 15px;
+    transition: background .3s;
+}
+
+.btn-style {
+    font-family: franchise_freebold,sans-serif;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+	text-decoration:none;
+}
+
+a.btn-action:hover{
+    background:#fff;
+    color:#00b2a9;
+}
+
+.header-position{
+    position: relative;
+    top: 0;
+    z-index: 99999;
+    background: #fff;
+    width: 100%;}
+
+.section-partners {
+    background: #ebebeb;
+    padding: 19px;
+    clear: both;
+    margin-top: 15px;
+}
+
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.clinical-title a{
+    text-decoration:none;
+    color: #428bca;
+     }
+
+.clinical-title a:hover{
+ text-decoration:underline;
+     }
+
+.rotate:hover {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+
+.e-Newsletter{
+    text-decoration:none;
+}
+a.e-Newsletter:hover{
+    text-decoration:underline;
+}
+.header-menu li a{
+    display: inline-block;
+    line-height: 25px;
+    color: #343435;
+    font-size: 20px;
+    transition: background .3s;
+    text-decoration:none;
+    background:transparent;
+    font-weight:300;
+    font-family: Franchise;
+
+}
+
+.header-menu li a:hover {
+    color: #00b2a9!important;
+        background:#f1f1f1;
+}
+.link{
+    text-decoration:none;
+}
+a.link {
+    color: #939393!important;
+}
+
+a.link:hover{
+    color:#00b2a9!important;}
+
+.header-menu{
+    padding-top:30px;
+
+}
+.header-menu ul {
+    position: relative;
+    top: 13px;
+}
+.clinical-heading {
+    height:70px;
+    text-align: center;
+}
+
+a.btn-action1 {
+    font-family: Franchise;
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius:5px;
+}
+a.btn-action1:hover{
+    background:#fff;
+    color:#00b2a9;
+}
+
+.clinical-intro {
+background:#00b2a9;
+display:inline-block;
+padding:20px 0;
+}
+
+.left{
+    width:100%;   
+    float:left;   
+}
+.right{    
+    float:right;
+}
+
+/***suscribe-popup CSS***/
+
+#dialog_14{
+width:36%;
+padding:20px 0;
+top:10%!important;
+background:#f6f5f4!important;
+z-index:999;
+}
+.suscribe-popup p.md-headline, .suscribe-popup p.md-subhead{
+    padding-top:0px; 
+    padding-bottom:0px;  
+    margin:0px;
+}
+
+.suscribe-popup md-input-container{
+    margin:7px 0;
+}
+
+.ng-pristine .select-box{
+        padding:5px;
+        background:#fff;
+        box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
+        border:1px solid #DEDBDB;
+        border-radius:5px;
+        margin-bottom: 22px;
+
+}
+
+.ng-pristine .input-box input[type="text"] {
+
+        background:#fff;
+        box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
+        border:1px solid #DEDBDB;
+        border-radius:5px;
+        min-height:40px;
+}
+.ng-pristine .input-box input[type="email"], .ng-pristine .input-box input[type="number"], .ng-pristine input[type="search"] {
+
+        background:#fff;
+        box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
+        border:1px solid #DEDBDB;
+        border-radius:5px;
+        min-height:40px;
+}
+.ng-pristine input[type="search"]{
+
+}
+md-datepicker .md-datepicker-input-container{
+    padding: 5px;
+    background: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
+    border: 1px solid #DEDBDB;
+    border-radius: 5px;
+    min-height: 26px;
+    margin-left: 0px;
+    width: 94%;
+    position: relative;
+    left: -46px;
+}
+md-datepicker .md-button.md-icon-button {
+    margin: 7px 6px;
+    height: 40px;
+    min-width: 0;
+    line-height: 24px;
+    padding: 8px;
+    width: 40px;
+    border-radius: 50%;
+    z-index: 99;
+    position: relative;
+    top: 5px;
+    left: 70%;
+}
+md-datepicker{
+background: transparent!important;
+}
+.suscribe-popup md-input-container label:not(.md-container-ignore) {
+    position: absolute;
+    bottom: 100%;
+    left: 10px;
+ 
+}
+
+
+#dialog_14 md-card{
+background: transparent!important;
+    box-shadow: none!important;
+}
+
+.md-errors-spacer{
+    color:rgb(221,44,0);
+    height:0;
+}
+.close-btn{
+width:16px;
+height:16px;
+}
+.close-btn:hover
+{
+-webkit-transition: all .9s ease-out;
+-moz-transition: all .9s ease-out;
+-ms-transition: all .9s ease-out;
+-o-transition: all .9s ease-out;
+transition: all .9s ease-out;
+}
+.md-button.md-raised:not([disabled]){
+background:#00b2a9;
+color:#fff;
+}
+.suscribe-popup .input-box input[type="email"], .suscribe-popup .input-box input[type="number"], .suscribe-popup input[type="search"], .suscribe-popup .input-box input[type="text"] {
+     background:#fff;
+        box-shadow:none;
+        border-bottom:1px solid #DEDBDB;
+        border-top:0;
+        border-left:0;
+        border-right:0;
+        border-radius:0;
+        min-height:30px;
+}
+
+
+md-dialog{
+    margin-top:150px;
+    width:80%;
+}
+/*md-bottom-sheet{
+    top:40;
+}*/
+
+/****Search Box*****/
+
+.search{
+     position: absolute;
+    display: inline-block;
+    width: 100%;
+    left: 0;
+    top: 81px;
+}
+
+.search_form{
+  background: #e4e2e2;
+  position:absolute;
+  z-index:0;
+  padding:0px 5px;
+  right:0;
+  top:15px;
+  overflow: hidden;
+  
+  width: 20px;
+  height:0px;
+  transition: height 0.2s ease-out 0.5s , top 0.2s ease-out 0.5s, padding 0.2s ease-out 0.5s, width 0.3s ease-out 0.2s;
+  -webkit-transition: height 0.2s ease-out 0.5s , top 0.2s ease-out 0.5s, padding 0.2s ease-out 0.5s, width 0.3s ease-out 0.2s;
+}
+.search_form form{
+  opacity:0;
+   transition:all 0.3s ease-out;
+  -webkit-transition:all 0.3s ease-out;
+ 
+}
+.search_form input{
+  background:#fff;
+  border:none;
+}
+.search_form input[type='text']{
+        border-radius: 5px 0 0 5px;
+    width: 93%;
+    padding:0px 5px 1px;
+    min-height: 50px;
+    margin: 30px auto 30px;
+}
+.search_form input[type='submit']{
+border-radius: 0 5px 5px 0;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 16px 20px;
+    cursor: pointer;
+    background: #00b2a9;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 2px;
+    position: absolute;
+    top: 28px;
+    right: 0;
+}
+.search_box{
+  visibility: hidden;
+}
+.icon-search {
+    position: absolute;
+    right: 146px;
+}
+
+.search_box:checked~.search_form{
+  width: 100%;
+  height:120px;
+  padding:5px;
+  top:35px;
+  transition: height 0.2s ease-out, top 0.2s ease-out, padding 0.2s ease-out, 0.3s width ease-out 0.2s;
+  -webkit-transition: height 0.2s ease-out, top 0.2s ease-out, padding 0.2s ease-out, 0.3s width ease-out 0.2s;
+}
+.search_box:checked~.search_form form{
+  opacity:1;
+  transition:0.3s all ease-out 0.5s;
+  -webkit-transition:0.3s all ease-out 0.5s;
+     margin:auto;
+      width:50%;
+          position: relative;
+}
+.md-transition-in form {
+   
+    font-size: 12px;
+    text-transform:uppercase;
+
+}
+.suscribe-popup label{
+color:#808080;
+}

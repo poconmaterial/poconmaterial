@@ -1,0 +1,66 @@
+<div flex layout="row" style="background-color:#DDE7ED;" ng-controller="defaultCtrl" ng-style="{'padding-left':$mdMedia('gt-sm')?'150px':'10px','padding-right':$mdMedia('gt-sm')?'150px':'10px'}">
+
+    <div flex layout="column" ng-controller="linkCTRL" layout-align="center center">
+        <a href="/" ng-click="nt('index.html')" hide-xs>
+            <img src="img/cropped-header.jpg" style="max-width:100%;height:auto;">
+        </a>
+        <a href="/" ng-click="nt('index.html')" hide-gt-xs>
+            <img src="img/moblogo.jpg" style="width:150px;height:auto;">
+        </a>
+        <ul flex layout="row" ng-controller="linkCTRL" layout-align="center center" style="list-style-type:none; position: relative;font-size: 16px;" layout-padding class="header-menu" hide-xs>
+
+            <li><a href="" ng-click="nt('index.html')" ng-style="{'color':getClass('index.html')}">HOME</a></li>
+            <li><a href="" ng-click="nt('about.html')" ng-style="{'color':getClass('about.html')}">ABOUT US</a></li>
+            <li><a href="" ng-click="nt('events.html')" ng-style="{'color':getClass('events.html')}">EVENTS</a></li>
+            <li><a href="" ng-click="nt('faq.html')" ng-style="{'color':getClass('faq.html')}">FAQ</a></li>
+            <li><a href="" ng-click="nt('volunteer.html')" ng-style="{'color':getClass('volunteer.html')}">VOLUNTEER</a></li>
+            <li><a href="" ng-click="nt('corner.html')" ng-style="{'color':getClass('corner.html')}">VOLUNTEER CORNER</a></li>
+            <li>
+                <a href="" ng-controller="DialogCtrl" ng-click="showAdvanced($event)">GIVE</a>
+                <script type="text/ng-template" id="form.html">
+                    <div flex layout-align="center center">
+                        <span class="layout-column layout-align-start-end">
+                            <md-button class="md-icon-button close-btn" ng-click="cancel()">
+                                <svg style="width:16px;height:16px" viewBox="0 0 20 20">
+                                    <path fill="#3366ff" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+                                </svg>
+                            </md-button>
+                        </span>
+                        <md-card style="box-shadow:none; padding:0 20px;">
+                            <p class="s4" style="color: #000000;"><span class="s5">Through the H.O.P.E. Team's&nbsp;</span><a href="http://www.hopeteamaz.org/h-o-p-e-team-wish-list/"><span class="s6" style="font-style: italic; color: #0000ff;">Wish List</span></a><span class="s5">, the community is able to donate&nbsp;needed items to support the patients at CTCA. For ideas on how to hold a Wish List drive with your group, contact the H.O.P.E. Team Manager at 623-207-3545.</span></p>
+                            <p class="s4" style="color: #000000;"><span class="s5">100% of financial donations to the H.O.P.E. Team go directly to providing&nbsp;activities and supplies for the patients at CTCA and are tax&nbsp;</span><span class="s5">deductible. The</span><a name="_GoBack"></a><span class="s5">&nbsp;H.O.P.E. Team is a 501c3 nonprofit organization (Tax ID#27-0325096).</span></p>
+                            <p class="s4" style="color: #000000;"><span class="s5">For more information, please contact:</span></p>
+                            <p class="s4" style="color: #000000;">
+                                <span class="s5">H.O.P.E. Team</span><span class="s5">
+                                    <br>
+                                </span><span class="s5">14200 W.&nbsp;</span><span class="s5">Celebrate Life Way</span><span class="s5">
+                                    <br>
+                                </span><span class="s5">Goodyear, AZ 85338</span><span class="s5">
+                                    <br>
+                                </span><span class="s5">623-207-3545</span><span class="s5">
+                                    <br>
+                                </span><span class="s5">HOPEteam@ctca-hope.com</span>
+                            </p>
+                            <p>&nbsp;</p>
+                        </md-card>
+                    </div>
+                </script>
+            </li>
+            <li><a href="" ng-controller="contactController as ctrl" ng-click="ctrl.openControlPanel()">CONTACT</a></li>
+        </ul>
+        <!--<div class="search">
+            <input class="search_box" type="checkbox" id="search_box">
+            <label class="icon-search" for="search_box">
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="#000000" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.43,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.43C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,14C11.11,14 12.5,13.15 13.32,11.88C12.5,10.75 11.11,10 9.5,10C7.89,10 6.5,10.75 5.68,11.88C6.5,13.15 7.89,14 9.5,14M9.5,5A1.75,1.75 0 0,0 7.75,6.75A1.75,1.75 0 0,0 9.5,8.5A1.75,1.75 0 0,0 11.25,6.75A1.75,1.75 0 0,0 9.5,5Z" />
+                </svg>
+            </label>
+            <div class="search_form">
+                <form action="#">
+                    <input type="text"><input type="submit" value="search">
+                </form>
+            </div>
+        </div>-->
+    </div>
+
+</div>

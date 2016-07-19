@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+
+    <link rel="stylesheet" href="css/mainstyle.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/angular-material.min.css" >
+</head>
+<body ng-app="BlankApp" ng-cloak style="background-color:#DDE7ED;">
+
+
+    <!-- for navmenu and subnav component -->
+    <div ng-include="'components/mainheader.html'" class="header-position" style="height:auto;"></div>
+    <!-- for carousel -->
+    <div ng-include="'components/share.html'"></div>
+    <md-card ng-controller="defaultCtrl" ng-style="{'margin-left':$mdMedia('gt-sm')?'150px':'10px','margin-right':$mdMedia('gt-sm')?'150px':'10px'}" style="overflow:hidden;">
+        <md-card layout="row" layout-xs="column" layout-align="center center">
+            <a href="" rel="bookmark" aria-label="banner" md-button><img width="870" height="400" src="http://www.hopeteamaz.org/wp-content/uploads/2011/04/hope-team-2013-home-page-header.jpg" alt="hope-team-2013-home-page-header" style="max-width:100%;height:auto;"></a>
+        </md-card>
+        <md-card layout="row" layout-xs="column" layout-sm="column">
+            <div flex>
+                <md-card layout-padding>
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-title" style="color:burlywood;">H.O.P.E. Team Wish List</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                    <p>
+                        Our Wish List shows items needed for patient activities and outings as well as comfort items that will be distributed to patients to support them through their journey.
+                    </p>
+                    <md-card-actions>
+                        <md-button hide-xs style="color: #34accb;" ng-controller="wishController as ctrl" ng-click="ctrl.openControlPanel()">Click here to see the items on our wish list.</md-button>
+                        <md-button  hide-gt-xs style="color: #34accb;" ng-controller="wishController as ctrl" ng-click="ctrl.openControlPanel()">Click here for wish list.</md-button>
+                    </md-card-actions>
+                    <a href=""><img src="http://www.hopeteamaz.org/wp-content/uploads/2013/09/hope-team-teen-leadership-badge.png"></a>
+                    <p>Applications accepted annually; April 10th - May 10th.</p>
+                </md-card>
+            </div>
+            <div flex>
+                <md-card layout-padding>
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-title" style="color:burlywood;">Make a Donation to H.O.P.E. Team</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                    <md-card-actions>
+                        <a href="" ng-controller="viewerController as ctrl" ng-click="ctrl.openControlPanel()" hide-xs><img src="http://www.hopeteamaz.org/wp-content/uploads/2013/09/donate.png" style="padding-top: 15%;"></a>
+                        <a href="" ng-controller="DialogCtrl" ng-click="showDonate($event)" hide-gt-xs><img src="http://www.hopeteamaz.org/wp-content/uploads/2013/09/donate.png" style="padding-top: 15%;"></a>
+
+                        <img src="http://www.hopeteamaz.org/wp-content/uploads/2013/09/apply_online_volunteer-v2.png" scale="0">
+                    </md-card-actions>
+                </md-card>
+            </div>
+            <div flex>
+                <md-card layout-padding>
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-title" style="color:burlywood;">Contact H.O.P.E. Team</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                        <p>If you have a question, or want to make a donation, contact:<br>
+                        H.O.P.E. Team Manager <br>
+                        623-207-3545<br>
+                        HOPEteam@ctca-hope.com<br>
+                        H.O.P.E. Team<br>
+                        14200 W. Celebrate Life Way<br>
+                        Goodyear, AZ 85338</p>
+                </md-card>
+                
+                <md-card layout-padding>
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-title" style="color:burlywood;">2015 Charity Events</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                    <md-card-actions>
+                        <a href=""><img src="http://www.hopeteamaz.org/wp-content/uploads/2014/07/register-to-play-20152.png"></a>
+                        <a href=""><img src="http://www.hopeteamaz.org/wp-content/uploads/2014/07/find-out-more-shoot-for-hope1.png"></a>
+                    </md-card-actions>
+                </md-card>              
+            </div>
+        </md-card>
+    </md-card>
+    <div ng-include="'components/mobtab.html'"></div>
+    <div ng-include="'components/footer.html'"></div>
+    <!-- Angular Material requires Angular.js Libraries -->
+
+    <script src="js/angular.min.js"> </script>
+
+    <script src="js/angular-animate.min.js"> </script>
+    <script src="js/angular-aria.min.js"> </script>
+    <script src="js/angular-material.min.js">    </script>
+    <script src="js/angular-messages.min.js"></script>
+    <script src="js/mainlogic.js"></script>
+</body>
+</html>

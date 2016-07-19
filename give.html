@@ -1,0 +1,125 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+
+    <link rel="stylesheet" href="css/mainstyle.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/angular-material.min.css">
+
+</head>
+<body ng-app="BlankApp" ng-cloak style="background-color:#DDE7ED;">
+
+
+    <!-- for navmenu and subnav component -->
+    <div ng-include="'components/mainheader.html'" class="header-position" style=""></div>
+    <div ng-include="'components/share.html'"></div>
+    <div flex layout="row" layout-padding layout-wrap ng-controller="defaultCtrl" ng-style="{'margin-left':$mdMedia('gt-sm')?'100px':'20px','margin-right':$mdMedia('gt-sm')?'100px':'20px','margin-bottom':$mdMedia('gt-sm')?'20px':'5px','min-height':$mdMedia('sm')?'700px':'1250px'}">
+        <div flex="25" hide-xs hide-sm>
+            <div flex style="background-color:#ea5428!important;" ng-controller="listCtrl">
+                <md-list>
+                    <md-list-item ng-repeat="item in signature" style="border-bottom: 1px dashed #f7b6ab;">
+                        <a class="md-button md-ink-ripple" href="" ng-transclude style="color:#fff;" md-button>{{item.name }}</a>
+                    </md-list-item>
+                </md-list>
+            </div>
+            <br>
+            <div flex style="background-color:#7f3264!important;color:#fff;" layout-padding>
+                <p class="md-title layout-align-center-center">99 cents of every dollar received directly funds cancer clinical trials</p>
+            </div>
+            <div flex>
+                <center>
+                    <h2 style="color:#6fbf39">54</h2>
+                    <p>Current Gateway-funded clinical trials</p>
+                    <span flex></span>
+                    <h2 style="color:#6fbf39">140+</h2>
+                    <p>Clinical trials funded at leading institutions worldwide</p>
+                    <span flex></span>
+                    <h2 style="color:#6fbf39">16.56</h2>
+                    <p>Funds one patient for one day at a Gateway-funded clinical trial</p>
+                    <span flex></span>
+                </center>
+            </div>
+        </div>
+        <div flex>
+            <img alt="About.jpg" src="img/about_gateway.jpg" style="max-width:100%;height:auto;" ng-controller="defaultCtrl" ng-style="{'margin-top':$mdMedia('xs')?'10px':'auto'}">
+            <div layout="row" layout-xs="column">
+                <md-card style="border:1px solid #c7c7c7;">
+                    <img src="img/destination_cures_2016_signature_events_banner.png" style="max-width:100%;height:auto;">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-subhead" hide-xs>Saturday, April 30, 2016</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button ng-controller="curesController as ctrl" ng-click="ctrl.openControlPanel()" class="md-raised md-btn" style="background-color:#47e1db;color:#fff;">Event Details</md-button>
+                    </md-card-actions>
+                </md-card>
+                <md-card style="border:1px solid #c7c7c7;">
+                    <img src="img/destination_cures_2016_signature_events_banner.png" style="max-width:100%;height:auto;">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-subhead" hide-xs>Saturday, April 30, 2016</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button ng-controller="curesController as ctrl" ng-click="ctrl.openControlPanel()" class="md-raised md-btn" style="background-color:#47e1db;color:#fff;">Event Details</md-button>
+                    </md-card-actions>
+                </md-card>
+            </div>
+            <div class="layout-row layout-xs-column">
+                <md-card style="border:1px solid #c7c7c7;">
+                    <img src="img/cog-hill-signature-event-banner-2016.png" style="max-width:100%;">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <a class="md-subhead" href="" hide-xs>Click to email Delora Senft for more information</a>
+                        </md-card-title-text>
+                    </md-card-title>
+                </md-card>
+                <md-card style="border:1px solid #c7c7c7;">
+                    <img src="img/cures-gala-2015.png" style="max-width:100%;height:auto;">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-subhead" hide-xs>Saturday, October 17, 2015</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button ng-controller="galaController as ctrl" ng-click="ctrl.openControlPanel()" class="md-raised md-btn" style="background-color:#47e1db;color:#fff;">Event Details</md-button>
+                    </md-card-actions>
+                </md-card>
+            </div>
+            <div class="layout-row layout-xs-column">
+                <md-card style="border:1px solid #c7c7c7;">
+                    <img src="img/bah-3-version-center-image-2.png" style="max-width:100%;height:auto;">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-subhead" hide-xs>Friday, October 16, 2015</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button ng-controller="heroController as ctrl" ng-click="ctrl.openControlPanel()" class="md-raised md-btn" style="background-color:#47e1db;color:#fff;">Read More</md-button>
+                    </md-card-actions>
+                </md-card>
+            </div>
+        </div>
+    </div>
+    <div ng-include="'components/mobtab.html'" hide-gt-xs></div>
+    <div ng-include="'components/footer.html'"> </div>
+    <!-- Angular Material requires Angular.js Libraries -->
+
+    <script src="js/angular.min.js"> </script>
+
+    <script src="js/angular-animate.min.js"> </script>
+    <script src="js/angular-aria.min.js"> </script>
+    <script src="js/angular-material.min.js">    </script>
+
+    <script src="js/angular-messages.min.js"></script>
+   
+
+    <script src="js/mainlogic.js"></script>
+ 
+</body>
+</html>

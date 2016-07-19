@@ -1,0 +1,118 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+
+    <link rel="stylesheet" href="css/mainstyle.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/angular-material.min.css">
+
+</head>
+<body ng-app="BlankApp" ng-cloak style="background-color:#DDE7ED;">
+
+
+    <!-- for navmenu and subnav component -->
+    <div ng-include="'components/mainheader.html'" class="header-position" style=""></div>
+    <div ng-include="'components/share.html'"></div>
+    <md-card layout="row" layout-xs="column" layout-padding ng-controller="defaultCtrl" ng-style="{'margin-left':$mdMedia('gt-sm')?'150px':'10px','margin-right':$mdMedia('gt-sm')?'150px':'10px','min-height':$mdMedia('sm')?'700px':'1250px'}" style="overflow:hidden;">
+        <div flex="75" layout="column" flex-xs="100" flex-sm="100" layout-wrap>
+            <!--<div flex layout="column">
+                <p class="md-headline">A Privilege and an Honor</p>
+                <p class="md-caption">January 25, 2015 By <span style="color: #34accb;">admin</span></p>
+                <div layout="row" layout-xs="column" flex layout-padding>
+                    <div flex="35">
+                        <img src="http://www.hopeteamaz.org/wp-content/uploads/2015/01/Mike-Johnson.jpg"/>
+                    </div>
+                    <div flex>
+                    be a volunteer at Cancer Treatment Centers of America® with the H.O.P.E. Team is a privilege, honor, rewarding, and humbling experience.  To be with the other dedicated, friendly, caring volunteers, stakeholders, and most importantly, the cancer patients, is very uplifting and heartwarming.  The atmosphere is filled with warmth, hope, dedication, and sincere compassion for all involved.  I highly recommend it to those looking for a meaningful experience, where you are guaranteed to receive more than you give.  I am absolutely, positively convinced that Mary Stephenson could not be more proud of what her son, Richard, has achieved in creating such a positive atmosphere and environment, for this important work of curing, caring, and respecting people, who are struggling in the fight of their lives.
+                    </div>
+                </div>
+            </div>-->
+            <div flex layout="column">
+                <p class="md-headline">A Privilege and an Honor</p>
+                <p class="md-caption">January 25, 2015 By <span style="color: #34accb;">admin</span></p>
+                <div layout="row" layout-xs="column" flex layout-padding>
+                    <div flex="35" >
+                        <span>
+                            <img src="http://www.hopeteamaz.org/wp-content/uploads/2015/01/Mike-Johnson.jpg" /><p>- Michael Johnson</p>
+                        </span>
+                    </div>
+                    <div flex>
+                        be a volunteer at Cancer Treatment Centers of America® with the H.O.P.E. Team is a privilege, honor, rewarding, and humbling experience.  To be with the other dedicated, friendly, caring volunteers, stakeholders, and most importantly, the cancer patients, is very uplifting and heartwarming.  The atmosphere is filled with warmth, hope, dedication, and sincere compassion for all involved.  I highly recommend it to those looking for a meaningful experience, where you are guaranteed to receive more than you give.  I am absolutely, positively convinced that Mary Stephenson could not be more proud of what her son, Richard, has achieved in creating such a positive atmosphere and environment, for this important work of curing, caring, and respecting people, who are struggling in the fight of their lives.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div flex hide-xs hide-sm layout="column">
+            <md-card layout-padding>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-title" style="color:burlywood;">Make a Donation to H.O.P.E. Team</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-actions>
+                    <a href="" ng-controller="viewerController as ctrl" ng-click="ctrl.openControlPanel()"><img src="http://www.hopeteamaz.org/wp-content/uploads/2013/09/donate.png" style="padding-top: 15%;"></a>
+                </md-card-actions>
+            </md-card>
+            <md-card layout-padding>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-title" style="color:burlywood;">Volunteer</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <p>
+                    The H.O.P.E. Team provides the volunteer program at Western Regional Medical Center. These volunteers a vital part of the team that provides hope, healing, and care to patients and families affected by cancer. If you are looking for a life-changing experience and are available 3-4 hours a week, then the H.O.P.E. Team volunteer team may be just what you are seeking.
+                </p>
+                <md-card-actions layout="row" layout-align="center center">
+                    <a href=""><img src="http://www.hopeteamaz.org/wp-content/uploads/2013/09/hope-team-teen-leadership-badge.png"></a>
+                </md-card-actions>
+            </md-card>
+            <md-card layout-padding>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-title" style="color:burlywood;">Cancer Resources</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-actions layout-align="center center">
+                    <a href="" target="_blank"><img src="http://www.hopeteamaz.org/wp-content/uploads/2011/10/CTCA_Logo.jpg"></a>
+                    <a href="http://www.cancercompass.com/cancerfighter" style="text-decoration: none;">Cancer Fighters</a>
+                    <p><a href="http://azassistanceinhealthcare.org" style="text-decoration: none;">Arizona Assistance in Health Care</a></p>
+                </md-card-actions>
+            </md-card>
+            <md-card layout-padding>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-title" style="color:burlywood;">H.O.P.E. Team Wish List</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <p>
+                    Our Wish List shows items needed for patient activities and outings as well as comfort items that will be distributed to patients to support them through their journey.
+                </p>
+                <md-card-actions>
+                    <a md-button style="color: #34accb;" ng-controller="wishController as ctrl" ng-click="ctrl.openControlPanel()">Click here to see the iterms on ouw wish list.</a>
+                </md-card-actions>
+
+            </md-card>
+        </div>
+    </md-card>
+    <div ng-include="'components/mobtab.html'" hide-gt-xs></div>
+    <div ng-include="'components/footer.html'"> </div>
+    <!-- Angular Material requires Angular.js Libraries -->
+
+    <script src="js/angular.min.js"> </script>
+
+    <script src="js/angular-animate.min.js"> </script>
+    <script src="js/angular-aria.min.js"> </script>
+    <script src="js/angular-material.min.js">    </script>
+
+    <script src="js/angular-messages.min.js"></script>
+
+
+    <script src="js/mainlogic.js"></script>
+
+
+</body>
+</html>

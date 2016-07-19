@@ -1,0 +1,35 @@
+<div flex layout-align="center center">
+    
+    <form name="register" class="suscribe-popup">
+        <p class="md-title" style="color:#00b2a9;">Contact</p>
+        <label>Comments or questions are welcome.</label>
+        <div layout-gt-sm="row">
+            <md-input-container class="md-block input-box layout-xs" flex-gt-sm="">
+                <label>Full Name<span style="color:#f00;">*</span></label>
+                <input type="text" required />
+            </md-input-container>
+            <md-input-container class="md-block input-box layout-xs" flex-gt-sm="">
+                <label>Subject<span style="color:#f00;">*</span></label>
+                <input type="text" required />
+            </md-input-container>
+        </div>
+        <div layout-gt-sm="row">
+            <md-input-container class="md-block input-box layout-xs" flex-gt-sm="">
+                <label>Email-Id<span style="color:#f00;">*</span></label>
+                <input type="email" name="email" ng-model="email" required>
+                <span style="color:black;" ng-show="register.email.$dirty && register.email.$invalid">
+                    <span ng-show="register.email.$error.required">Email is required.</span>
+                    <span ng-show="register.email.$error.email">Invalid email address.</span>
+                </span>
+            </md-input-container>
+            <md-input-container class="md-block input-box layout-xs" flex-gt-sm="">
+                <textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;" placeholder="Hey... Say to Something"></textarea>
+            </md-input-container>
+
+        </div>
+        <br>
+        <md-button class="md-raised" href="" target="_self" style="background-color:#00b2a9;font-family:Franchise;font-size:25px;color:#fff;">
+            Submit
+        </md-button>
+    </form>   
+</div>

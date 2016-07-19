@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+
+    <link rel="stylesheet" href="css/mainstyle.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/angular-material.min.css">
+
+</head>
+<body ng-app="BlankApp" ng-cloak style="background-color:#DDE7ED;">
+
+
+    <!-- for navmenu and subnav component -->
+    <div ng-include="'components/mainheader.html'" class="header-position" style=""></div>
+    <div ng-include="'components/share.html'"></div>
+    <md-card flex layout="row" layout-xs="column" layout-padding ng-controller="defaultCtrl" ng-style="{'margin-left':$mdMedia('gt-sm')?'150px':'10px','margin-right':$mdMedia('gt-sm')?'150px':'10px','min-height':$mdMedia('sm')?'700px':'1250px'}" style="overflow:hidden;">
+        <div flex="75" layout="column" flex-xs="100" flex-sm="100">
+            <h1 class="md-title">FAQ</h1>
+            <ul>
+                <li><span style="font-weight: bold;">What does H.O.P.E. stand for?&nbsp;</span></li>
+                <li><span>H.O.P.E. stands for the four things we strive to provide to cancer patients and their families: Help, Optimism, Peace, and Encouragement.</span></li>
+                
+                <li><span style="font-weight: bold;">Is there an age restriction to volunteer?&nbsp;</span></li>
+                <li><span>H.O.P.E. Team members must be at least 18 years of age.</span><span>&nbsp;&nbsp;If you are interested in volunteering and under the age of 18, check out our Teen Leadership Program.</span><a name="_GoBack"></a></li>
+                
+                <li><span style="font-weight: bold;">What are the steps to apply to be&nbsp;</span><span style="font-weight: bold;">a</span><span style="font-weight: bold;">&nbsp;H.O.P.E. Team member?&nbsp;</span></li>
+                <li><span>1. Complete online application</span></li>
+                <li><span>2. Attend Volunteer Information/Orientation session (email invite will be sent when application is submitted).</span></li>
+                <li><span>3. Complete paperwork and processes covered in the Information/Orientation session and complete a shadow session that will be set up individually.</span></li>
+                
+                <li><span style="font-weight: bold;">Together we can make a difference!</span></li>
+            </ul>
+        </div>
+        <div flex hide-xs hide-sm layout="column">
+            <md-card layout-padding>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-title" style="color:burlywood;">Make a Donation to H.O.P.E. Team</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-actions>
+                    <a href="" ng-controller="viewerController as ctrl" ng-click="ctrl.openControlPanel()"><img src="http://www.hopeteamaz.org/wp-content/uploads/2013/09/donate.png" style="padding-top: 15%;"></a>
+                </md-card-actions>
+            </md-card>
+            <md-card layout-padding>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-title" style="color:burlywood;">Volunteer</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <p>
+                    The H.O.P.E. Team provides the volunteer program at Western Regional Medical Center. These volunteers a vital part of the team that provides hope, healing, and care to patients and families affected by cancer. If you are looking for a life-changing experience and are available 3-4 hours a week, then the H.O.P.E. Team volunteer team may be just what you are seeking.
+                </p>
+                <md-card-actions layout="row" layout-align="center center">
+                    <a href=""><img src="http://www.hopeteamaz.org/wp-content/uploads/2013/09/hope-team-teen-leadership-badge.png"></a>
+                </md-card-actions>
+            </md-card>
+            <md-card layout-padding>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-title" style="color:burlywood;">Cancer Resources</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-actions layout-align="center center">
+                    <a href="" target="_blank"><img src="http://www.hopeteamaz.org/wp-content/uploads/2011/10/CTCA_Logo.jpg"></a>
+                    <a href="http://www.cancercompass.com/cancerfighter" style="text-decoration: none;">Cancer Fighters</a>
+                    <p><a href="http://azassistanceinhealthcare.org" style="text-decoration: none;">Arizona Assistance in Health Care</a></p>
+                </md-card-actions>
+            </md-card>
+            <md-card layout-padding>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-title" style="color:burlywood;">H.O.P.E. Team Wish List</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <p>
+                    Our Wish List shows items needed for patient activities and outings as well as comfort items that will be distributed to patients to support them through their journey.
+                </p>
+                <md-card-actions>
+                    <a md-button style="color: #34accb;" ng-controller="wishController as ctrl" ng-click="ctrl.openControlPanel()">Click here to see the iterms on ouw wish list.</a>
+                </md-card-actions>
+
+            </md-card>
+        </div>
+    </md-card>
+    <div ng-include="'components/mobtab.html'" hide-gt-xs></div>
+    <div ng-include="'components/footer.html'"> </div>
+    <!-- Angular Material requires Angular.js Libraries -->
+
+    <script src="js/angular.min.js"> </script>
+
+    <script src="js/angular-animate.min.js"> </script>
+    <script src="js/angular-aria.min.js"> </script>
+    <script src="js/angular-material.min.js">    </script>
+
+    <script src="js/angular-messages.min.js"></script>
+
+    <script src="js/mainlogic.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<md-bottom-sheet ng-controller="defaultCtrl" ng-style="{'margin-left':$mdMedia('gt-xs')?'100px':'auto','margin-right':$mdMedia('gt-xs')?'100px':'auto','padding-left':$mdMedia('gt-xs')?'150px':'70px','padding-right':$mdMedia('gt-xs')?'150px':'70px'}">
+        
+        <form name="register" class="suscribe-popup">
+            <p class="md-title" style="color:#00b2a9;">Donate Now</p>
+            <label>DONER INFORMATION</label>
+            <md-divider></md-divider>
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block input-box layout-xs" flex-gt-sm="">
+                    <label>First Name<span style="color:#f00;">*</span></label>
+                    <input type="text" />
+                </md-input-container>
+                <md-input-container class="md-block input-box layout-xs" flex-gt-sm="">
+                    <label>Middle Name<span style="color:#f00;">*</span></label>
+                    <input type="text" />
+                </md-input-container>
+                <md-input-container class="md-block input-box layout-xs" flex-gt-sm="">
+                    <label>Last Name<span style="color:#f00;">*</span></label>
+                    <input type="text" />
+                </md-input-container>
+            </div>
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block input-box layout-xs" flex-gt-sm="">
+                    <label>Email-Id<span style="color:#f00;">*</span></label>
+                    <input type="email" name="email" ng-model="email" required>
+                    <span style="color:black;" ng-show="register.email.$dirty && register.email.$invalid">
+                        <span ng-show="register.email.$error.required">Email is required.</span>
+                        <span ng-show="register.email.$error.email">Invalid email address.</span>
+                    </span>
+                </md-input-container>
+                <md-input-container class="md-block input-box layout-xs" flex-gt-sm="">
+                    <label>Contact No</label>
+                    <input type="number" required />
+                </md-input-container>
+            </div>
+            <br>
+
+            <label>CARD INFORMATION</label>
+            <md-divider></md-divider>
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block input-box layout-xs" flex-gt-sm="">
+                    <label>CARD NUMBER<span style="color:#f00;">*</span></label>
+                    <input type="text" />
+                </md-input-container>
+                <md-input-container class="md-block input-box layout-xs" flex-gt-sm="">
+                    <label>CVV<span style="color:#f00;">*</span></label>
+                    <input type="text" />
+                </md-input-container>
+                <md-input-container class="md-block input-box layout-xs" flex-gt-sm="">
+                    <label>EXPIRY DATE<span style="color:#f00;">*</span></label>
+                    <input type="text" />
+                </md-input-container>
+            </div>
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block input-box layout-xs" flex-gt-sm="">
+                    <label>Amount to Donate(in $)</label>
+                    <input type="number" name="number" ng-model="age" required min="25" max="2500">
+                    <span style="color:black;" ng-show="register.number.$dirty && register.number.$invalid">
+                        <span ng-show="register.number.$error.required">Amount is required.</span>
+                    </span>
+                </md-input-container>
+            </div>
+            <md-button class="md-raised" href="" target="_self" style="background-color:#00b2a9;font-family:Franchise;font-size:25px;color:#fff;">
+                Donate
+            </md-button>
+        </form>
+
+    </md-bottom-sheet>
